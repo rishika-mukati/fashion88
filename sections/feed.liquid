@@ -1,0 +1,67 @@
+{{ 'feed.css' | asset_url | stylesheet_tag }}
+<section class="cstm_feed">
+  {% if section.settings.heading !=blank %}
+  <h2>{{ section.settings.heading }}</h2>
+  {% else %}
+  <h2>Tag your photos with #HAPPYPOINTS and #HAMSA TECHNOLOGIES</h2>
+  {% endif %}
+  <div class="photots_gallery">
+    {% for block in section.blocks %}
+    <div class="gallery_content">
+      {% if block.settings.image !=blank %}
+      <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.heading }}">
+      {% else %}
+      <img src="{{ 'layer1.png' | asset_url }}" alt="Feed Image">
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Feed",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+	],
+	"blocks": [
+		{
+          "type": "feed",
+          "name": "Feed Gallery",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            }
+          ]
+		}
+	],
+	"presets": [
+      {
+        "name": "Feed Gallery",
+		"blocks": [
+          {
+            "type" : "feed"
+          },
+          {
+            "type" : "feed"
+          },
+          {
+            "type" : "feed"
+          },
+          {
+            "type" : "feed"
+          },
+          {
+            "type" : "feed"
+          }
+		]
+      }
+  	]
+
+  }
+{% endschema %}

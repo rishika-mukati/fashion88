@@ -1,0 +1,43 @@
+.multi_column_section {
+    display: flex;
+    width: 100%;
+  	position:relative;
+}
+.image_with_text_overlay {
+    width: 50%;
+  	position: relative;
+}
+.image_with_text_overlay .heading_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.heading_content h2 {
+    font-size: 50px;
+    line-height: 50px;
+    color: #fefefe;
+    font-weight: bold;
+    font-family: "GOTHAMHTF-BOLD";
+    text-transform: uppercase;
+    margin: 0;
+}
+.heading_content h3 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+    color: #fefefe;
+    font-weight: bold;
+    font-family: 'GOTHAMHTF-BOLD';
+    text-align: center;
+}
+.image_content {
+    height: 100%;
+}
+.image_content img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}

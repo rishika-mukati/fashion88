@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="{{ 'custom_header.css' | asset_url }}">
+{{ 'homepage_banner.css' | asset_url | stylesheet_tag }}
+<section class="cstm_homepage_banner">
+  <div class="image_with_content">
+    {% if section.settings.image != blank %}
+    <div class="image_content">
+      <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.heading }}">
+    </div>
+    {% else %}
+    <div class="image_content">
+      <img src="{{ 'Homepage.png' | asset_url }}" alt="Banner Image">
+    </div>
+    {% endif %}
+    {% if section.settings.menu != blank or section.settings.heading != blank %}
+    <div class="text_content">
+      {% render 'custom_header' %}
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Homepage Banner",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "default": "main-menu",
+        "label": "Menu"
+      },
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading",
+		"default":"HappyPoints"
+      }
+	],
+	"presets": [
+      {
+        "name": "Homepage Banner"
+      }
+  	]
+  }
+{% endschema %}
+

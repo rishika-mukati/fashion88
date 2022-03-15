@@ -1,0 +1,64 @@
+<section class="cstm-header">
+  {% if section.settings.menu !=blank %}
+  <ul class="menu">
+    {% for link in section.settings.menu.links %}
+    <li class="menu-link">
+      <a href="{{ link.url }}">{{ link.title }}</a>
+
+      {% if link.links.size > 0 %}
+      <ul class="menu dropdown-child">
+        {% for child_link in link.links %}
+        <li class="menu-link">
+          <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+
+          {% if child_link.links.size > 0 %}
+          <ul class="menu dropdown-grandchild">
+            {% for grandchild_link in child_link.links %}
+            <li class="menu-link">
+              <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <ul class="menu">
+    <li class="menu-link">
+      <a href="/collections/new-arrivals">New Arrivals</a>      
+    </li>
+    <li class="menu-link">
+      <a href="/collections/boots">Boots</a>
+    </li>
+    <li class="menu-link">
+      <a href="/collections/flats">Flats</a>      
+    </li>
+    <li class="menu-link">
+      <a href="/collections/heels">Heels</a>   
+    </li>
+    <li class="menu-link">
+      <a href="/collections/sandals">Sandals</a>  
+    </li>
+    <li class="menu-link">
+      <a href="/collections/sneakers">Sneakers</a> 
+    </li>
+    <li class="menu-link">
+      <a href="/collections/sale">Sale</a>    
+    </li>
+    <li class="menu-link">
+      <a href="/collections">View All</a>
+    </li>
+    <li class="menu-link">
+      <a href="/pages/campaign">Campaign</a>      
+    </li>
+    <li class="menu-link">
+      <a href="/blogs/news/story">Story</a>
+    </li>
+  </ul>
+  {% endif %}
+</section>

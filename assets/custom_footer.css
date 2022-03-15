@@ -1,0 +1,107 @@
+.cstm_footer_parent{
+    padding: 40px 80px;
+}
+.cstm_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	padding-bottom:40px;
+}
+.footer-block__heading {
+    font-size: 17px;
+    line-height: 14px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+  	font-family: 'GothamHTF-Bold';
+}
+#NewsletterForm--custom_footer {
+    height: 43px;
+    padding: 8px;
+    width: 400px;
+}
+#Subscribe {
+    background: #000;
+    color: #fff;
+    position: relative;
+    margin-left: 6px;
+  	font-family: 'GothamHTF-Bold';
+}
+.newsletter-form__field-wrapper {
+    display: flex;
+    align-items: center;
+}
+.list-social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+.list-social__item a img {
+    width: 24px;
+}
+.list-social__item {
+    padding: 0 12px;
+}
+.newsletter-form__field-wrapper .field {
+    box-shadow: none !important;
+}
+.newsletter-form__field-wrapper .field:before {
+	border: 1px solid #161616;
+}
+.footer_nav h2 {
+    font-size: 17px;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+  	font-family: 'GothamHTF-Bold';
+}
+.footer_nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer_nav ul li {
+    font-size: 12px;
+}
+.footer_nav ul li a, .copyright_nav ul li a {
+    color: #000;
+    text-decoration: none;
+  	font-family: 'GothamHTF-Book';
+  	font-weight: bold;
+}
+.copyright_nav {
+    position: relative;
+    width: 100%;
+}
+.copyright_nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.copyright_nav ul li {
+    padding: 0 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 19px;
+    color: #000000;
+  	position:relative;
+}
+.copyright_nav ul li:after {
+    position: absolute;
+    content: "";
+    height: 80%;
+    width: 1px;
+    background: #000;
+    top: 50%;
+    right: 0px;
+    transform: translate(0%, -50%);
+}
+.copyright_nav ul li:last-child::after{
+	display:none;
+}

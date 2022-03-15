@@ -1,0 +1,66 @@
+{{ 'multi_column.css' | asset_url | stylesheet_tag }}
+<section class="multi_column_section">
+  {% for block in section.blocks %}
+  <div class="image_with_text_overlay">
+    {% if  block.settings.image !=blank %}
+    <div class="image_content">
+      <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.heading }}">
+    </div>
+    {% else %}
+    <div class="image_content">
+      <img src="{{ 'happypoints.png' | asset_url }}" alt="">
+    </div>
+    {% endif %}
+    {% if  block.settings.heading !=blank or block.settings.subheading !=blank %}
+    <div class="heading_content">
+      <h2>{{ block.settings.heading }}</h2>
+      <h3>{{ block.settings.subheading }}</h3>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% schema %}
+  {
+    "name": "Multi column",
+    "settings": [],
+	"blocks": [
+		{
+          "type": "column",
+          "name": "Image with text overlay",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading",
+			  "default":"Heading"
+            },
+            {
+              "type": "text",
+              "id": "subheading",
+              "label": "Sub Heading",
+			  "default":"Sub Heading"
+            }
+          ]
+		}
+	],
+	"presets": [
+      {
+        "name": "Multi Column",
+        "blocks": [
+          {
+            "type" : "column"
+          },
+          {
+            "type" : "column"
+          }
+		]
+      }
+  	]
+  }
+{% endschema %}

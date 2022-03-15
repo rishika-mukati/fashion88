@@ -1,0 +1,31 @@
+.cstm_feed {
+    width: 100%;
+    position: relative;
+}
+.cstm_feed h2 {
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 57px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    font-family: 'GothamHTF-Book';
+}
+.photots_gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.gallery_content {
+    width: 20%;
+    height: 290px;
+    max-height: 100%;
+}
+.gallery_content img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}

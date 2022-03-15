@@ -1,0 +1,21 @@
+.cstm-header {
+    width: 22%;
+}
+.cstm-header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.cstm-header ul li {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 4px;
+    line-height: 47px;
+}
+.cstm-header ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'GothamHTF-Book';
+}
